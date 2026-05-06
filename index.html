@@ -1,307 +1,396 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHÙNG NGUYỄN TRUNG ĐỨC - Game Design Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHÙNG NGUYỄN TRUNG ĐỨC - Game Design Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary-fixed": "#23005c",
+                "surface-tint": "#00dbe9",
+                "surface-container": "#191f2f",
+                "on-tertiary-fixed": "#181c24",
+                "on-tertiary-container": "#5b5e69",
+                "on-primary-fixed": "#002022",
+                "on-tertiary-fixed-variant": "#434751",
+                "surface-container-lowest": "#080e1d",
+                "on-tertiary": "#2d303a",
+                "on-primary-container": "#006970",
+                "secondary": "#d0bcff",
+                "primary-fixed-dim": "#00dbe9",
+                "surface-container-high": "#242a3a",
+                "background": "#0d1322",
+                "secondary-fixed-dim": "#d0bcff",
+                "on-error-container": "#ffdad6",
+                "on-surface-variant": "#b9cacb",
+                "on-secondary": "#3c0091",
+                "inverse-on-surface": "#2a3040",
+                "inverse-surface": "#dde2f8",
+                "on-primary-fixed-variant": "#004f54",
+                "tertiary": "#f4f5ff",
+                "on-secondary-container": "#c4abff",
+                "outline-variant": "#3b494b",
+                "on-surface": "#dde2f8",
+                "secondary-fixed": "#e9ddff",
+                "outline": "#849495",
+                "on-secondary-fixed-variant": "#5516be",
+                "surface-variant": "#2f3445",
+                "primary-container": "#00f0ff",
+                "surface-bright": "#33394a",
+                "tertiary-container": "#d6d9e5",
+                "primary-fixed": "#7df4ff",
+                "surface-dim": "#0d1322",
+                "tertiary-fixed-dim": "#c3c6d2",
+                "inverse-primary": "#006970",
+                "surface-container-highest": "#2f3445",
+                "tertiary-fixed": "#e0e2ee",
+                "primary": "#dbfcff",
+                "surface": "#0d1322",
+                "on-primary": "#00363a",
+                "secondary-container": "#571bc1",
+                "error-container": "#93000a",
+                "surface-container-low": "#151b2b",
+                "on-error": "#690005",
+                "error": "#ffb4ab",
+                "on-background": "#dde2f8"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin": "32px",
+                "xl": "48px",
+                "sm": "8px",
+                "unit": "4px",
+                "lg": "24px",
+                "md": "16px",
+                "xs": "4px",
+                "gutter": "20px"
+        },
+        "fontFamily": {
+                "body-lg": [
+                        "Space Grotesk"
+                ],
+                "label-caps": [
+                        "Space Grotesk"
+                ],
+                "headline-lg": [
+                        "Space Grotesk"
+                ],
+                "body-md": [
+                        "Space Grotesk"
+                ],
+                "headline-md": [
+                        "Space Grotesk"
+                ],
+                "data-mono": [
+                        "Space Grotesk"
+                ]
+        },
+        "fontSize": {
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "letterSpacing": "0em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "letterSpacing": "0em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "data-mono": [
+                        "14px",
+                        {
+                                "lineHeight": "1.4",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); scroll-behavior: smooth; }
+        .tech-border { border: 1px solid theme('colors.outline-variant'); position: relative; }
+        .tech-border::after { content: ''; position: absolute; inset: -1px; border: 1px solid theme('colors.primary-container'); opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
+        .tech-border:hover { border-color: theme('colors.primary-container'); box-shadow: 0 0 15px rgba(0, 240, 255, 0.2), inset 0 0 15px rgba(0, 240, 255, 0.05); }
+        .tech-border:hover::after { opacity: 1; box-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+        .glow-text { text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+        .tech-grid { background-image: linear-gradient(theme('colors.surface-container-high') 1px, transparent 1px), linear-gradient(90deg, theme('colors.surface-container-high') 1px, transparent 1px); background-size: 32px 32px; background-position: center center; }
+        .glass-nav { background: rgba(13, 19, 34, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 240, 255, 0.1); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); }
+        .nav-item.active { color: theme('colors.primary-container'); text-shadow: 0 0 5px rgba(0,240,255,0.8); }
+    </style>
 </head>
-<body>
-    <!-- TopNavBar -->
-    <nav class="navbar">
-        <div class="container flex justify-between items-center">
-            <div class="h3 text-primary-fixed" style="letter-spacing: -0.05em;">PHUNG NGUYEN TRUNG DUC</div>
-            <div class="nav-links gap-md label-caps">
-                <a href="#projects" class="active">Projects</a>
-                <a href="#analysis">Analysis</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="flex items-center gap-sm">
-                <button class="btn-primary label-caps">
-                    Download CV
-                </button>
-                <span class="material-symbols-outlined text-primary" style="cursor: pointer; font-size: 28px;">terminal</span>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero-section tech-grid section">
-            <div class="hero-overlay"></div>
-            <div class="container hero-content flex flex-col gap-md">
-                <span class="mono-code status-badge">[ STATUS: SEEKING OPPORTUNITIES ]</span>
-                <h1 class="text-primary">PHÙNG NGUYỄN TRUNG ĐỨC</h1>
-                <p class="h3 text-on-surface-variant">Game Design Intern | Bridging Programming & Player Experience</p>
-                <p class="body-lg text-on-surface-variant" style="max-width: 42rem; margin-top: var(--spacing-sm);">
-                    Designing systemic loops and juicy mechanics. Specializing in technical design where code meets feel.
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md tech-grid relative">
+<div class="fixed inset-0 bg-background/90 z-[-1]"></div>
+<!-- TopNavBar -->
+<nav class="glass-nav docked full-width top-0 sticky flex justify-between items-center w-full px-margin py-md z-50">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-primary-container glow-text uppercase">PN.TRUNGDUC</div>
+<div id="nav-links" class="hidden md:flex gap-lg font-label-caps text-label-caps tracking-widest relative">
+<a class="nav-item text-on-surface-variant hover:text-primary-container transition-colors duration-300 pb-1" href="#about">About</a>
+<a class="nav-item active text-on-surface-variant hover:text-primary-container transition-colors duration-300 pb-1" href="#projects">Projects</a>
+<a class="nav-item text-on-surface-variant hover:text-primary-container transition-colors duration-300 pb-1" href="#analysis">Analysis</a>
+<a class="nav-item text-on-surface-variant hover:text-primary-container transition-colors duration-300 pb-1" href="#contact">Contact</a>
+<div id="nav-indicator" class="absolute bottom-0 h-[2px] bg-primary-container shadow-[0_0_5px_rgba(0,240,255,0.8)] transition-all duration-300 rounded-full"></div>
+</div>
+<div class="flex gap-md items-center">
+<button class="bg-primary-container/10 border border-primary-container text-primary-container px-lg py-sm font-label-caps text-label-caps hover:bg-primary-container hover:text-background hover:shadow-[0_0_20px_rgba(0,240,255,0.8)] transition-all flex items-center gap-sm uppercase tracking-widest">
+                Download CV
+            </button>
+<span class="material-symbols-outlined text-primary-container hover:text-primary-fixed hover:drop-shadow-[0_0_8px_rgba(0,240,255,0.8)] transition-all duration-300 cursor-pointer">terminal</span>
+</div>
+</nav>
+<main class="flex-grow w-full max-w-[1440px] mx-auto">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center justify-center px-margin py-xl overflow-hidden" id="hero">
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-container/10 via-background to-background z-0"></div>
+<div class="z-10 w-full flex flex-col gap-lg text-center md:text-left border-l-4 border-primary-container pl-lg">
+<span class="font-data-mono text-data-mono text-primary-fixed tracking-widest uppercase inline-block border border-primary-container/30 bg-surface-container/50 px-md py-sm self-start shadow-[0_0_10px_rgba(0,240,255,0.1)]">[ STATUS: SEEKING OPPORTUNITIES ]</span>
+<h1 class="font-headline-lg text-[64px] leading-none font-bold text-on-surface uppercase tracking-tighter">PHÙNG NGUYỄN <br/><span class="text-primary-container glow-text">TRUNG ĐỨC</span></h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant font-medium">Game Design Intern | Bridging Programming Logic &amp; Player Experience</p>
+<p class="font-body-lg text-body-lg text-outline max-w-3xl">
+                    Technical Game Designer specializing in systemic loops and juicy mechanics for Casual/Puzzle mobile markets.
                 </p>
-            </div>
-        </section>
-
-        <!-- About Me -->
-        <section id="about" class="section container">
-            <div class="flex flex-col gap-lg">
-                <div class="section-header">
-                    <h2 class="text-primary">About Me</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="about-card tech-border flex flex-col gap-lg items-center justify-between">
-                    <div class="flex justify-center" style="width: 100%; max-width: 16rem;">
-                        <div class="about-image glow-effect">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOuNR_aC2p_4BwhGpUQlddlFWJt3BAvXA5w72_dLo4PXXwe0cELsvVo-E14YbeVL6Lm5l819ngMBadNKGC1a9IA4LHE_aBRU4TZcAsFyPfTPKWqRXL970FEgxD563vAoFZIurOSWvMUIKeGRT9lNt702wuLm4thc5FBZmEevNyVq2LL-QxahjhPiVc0tE5eW-_8IIQZgS7ETfXsiKcRYOFQ4LYAZXVAALqP0DHPKjSGpWvWUwFeu1rHj2Sr6SMsvfZKxKAXe1Vh9S4" alt="Profile">
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-sm" style="flex: 1;">
-                        <h3 class="text-primary">Technical Game Designer</h3>
-                        <p class="body-lg text-on-surface-variant">
-                            Tôi là một Game Designer với nền tảng lập trình vững chắc. Sự kết hợp giữa tư duy logic của một developer và sự sáng tạo của một designer giúp tôi xây dựng những hệ thống gameplay có chiều sâu và dễ dàng triển khai thực tế.
+</div>
+</section>
+<!-- About Me -->
+<section class="py-xl px-margin" id="about">
+<div class="flex flex-col gap-xl">
+<div class="flex items-center gap-lg">
+<h2 class="font-headline-md text-headline-md text-primary-container font-bold uppercase tracking-wide glow-text">&gt; About Me</h2>
+<div class="h-[1px] bg-gradient-to-r from-primary-container/50 to-transparent flex-grow"></div>
+</div>
+<div class="tech-border p-xl bg-surface-container/60 backdrop-blur-sm flex flex-col md:flex-row gap-xl items-center">
+<div class="w-full md:w-1/3 flex justify-center">
+<div class="w-64 h-64 rounded-sm border-2 border-primary-container/50 overflow-hidden relative group">
+<div class="absolute inset-0 bg-primary-container mix-blend-overlay opacity-20 group-hover:opacity-0 transition-opacity duration-500 z-10"></div>
+<img alt="Profile" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOuNR_aC2p_4BwhGpUQlddlFWJt3BAvXA5w72_dLo4PXXwe0cELsvVo-E14YbeVL6Lm5l819ngMBadNKGC1a9IA4LHE_aBRU4TZcAsFyPfTPKWqRXL970FEgxD563vAoFZIurOSWvMUIKeGRT9lNt702wuLm4thc5FBZmEevNyVq2LL-QxahjhPiVc0tE5eW-_8IIQZgS7ETfXsiKcRYOFQ4LYAZXVAALqP0DHPKjSGpWvWUwFeu1rHj2Sr6SMsvfZKxKAXe1Vh9S4"/>
+<div class="absolute inset-0 border border-primary-container shadow-[inset_0_0_20px_rgba(0,240,255,0.3)] z-20 pointer-events-none"></div>
+</div>
+</div>
+<div class="w-full md:w-2/3 flex flex-col gap-md">
+<h3 class="font-headline-md text-[28px] text-on-surface font-semibold">Technical Game Designer</h3>
+<p class="font-body-lg text-on-surface-variant">
+                            Tôi là một Game Designer với nền tảng lập trình vững chắc. Sự kết hợp giữa tư duy logic của một developer và sự sáng tạo của một designer giúp tôi xây dựng những hệ thống gameplay có chiều sâu và dễ dàng triển khai thực tế trên nền tảng di động.
                         </p>
-                        <p class="body-md text-on-surface-variant">
+<p class="font-body-md text-outline">
                             Mục tiêu của tôi là tạo ra những trải nghiệm mượt mà, nơi người chơi có thể cảm nhận được "game feel" trong từng tương tác nhỏ nhất, đồng thời đảm bảo mã nguồn và hệ thống đủ linh hoạt để mở rộng.
                         </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Project: Weapon Master -->
-        <section id="projects" class="section container">
-            <div class="flex flex-col gap-lg">
-                <div class="section-header">
-                    <h2 class="text-primary">Featured Project</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="featured-project tech-border flex flex-col">
-                    <div class="featured-image-container">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeS_w3BgdwTvxo6Y22dFnhHCHiWdRyQQWKNYAGbcSvGRmB-J-RrycB98S6HahRK6NS8VZZzVrD8iMbJGC0i1ITk2DG_5MU1o5HNvgXZgFh7wrKdC3VzXd_2w70jABacT4uhrZbivZWh7xDCbN_AlGf7jGNzZwuobi9j9qps_woCZUUdAEGR4j7UKdB0Er82h-5bcYg8WC74PtA6f-_BY66mA-HuV_5igrfThVbj8Jf_bH3TeanH8ouFBtdy8j6jsmp0a0SliHQj4sb" alt="Weapon Master Gameplay">
-                        <div class="featured-image-overlay"></div>
-                    </div>
-                    
-                    <div class="featured-content flex flex-col gap-md">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <span class="mono-code text-secondary-fixed" style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Action / RPG</span>
-                                <h3 class="text-primary mt-xs">Weapon Master</h3>
-                            </div>
-                            <a href="#" class="text-primary"><span class="material-symbols-outlined play-icon">play_circle</span></a>
-                        </div>
-                        
-                        <p class="body-lg text-on-surface-variant">
-                            Dự án trọng điểm tập trung vào hệ thống chiến đấu đa dạng vũ khí. Mỗi loại vũ khí mang lại một cảm giác (game feel) hoàn toàn khác biệt thông qua việc tinh chỉnh frame data, hitstop, và screen shake.
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Project: Weapon Master -->
+<section class="py-xl px-margin" id="projects">
+<div class="flex flex-col gap-xl">
+<div class="flex items-center gap-lg">
+<h2 class="font-headline-md text-headline-md text-primary-container font-bold uppercase tracking-wide glow-text">&gt; Featured Project</h2>
+<div class="h-[1px] bg-gradient-to-r from-primary-container/50 to-transparent flex-grow"></div>
+</div>
+<div class="tech-border bg-surface-container/60 backdrop-blur-sm overflow-hidden group">
+<div class="flex flex-col xl:flex-row">
+<div class="w-full xl:w-1/2 min-h-[400px] relative overflow-hidden bg-surface-container-highest">
+<div class="absolute inset-0 bg-primary-container/10 mix-blend-color z-10 group-hover:opacity-0 transition-opacity duration-500"></div>
+<img alt="Weapon Master Gameplay" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeS_w3BgdwTvxo6Y22dFnhHCHiWdRyQQWKNYAGbcSvGRmB-J-RrycB98S6HahRK6NS8VZZzVrD8iMbJGC0i1ITk2DG_5MU1o5HNvgXZgFh7wrKdC3VzXd_2w70jABacT4uhrZbivZWh7xDCbN_AlGf7jGNzZwuobi9j9qps_woCZUUdAEGR4j7UKdB0Er82h-5bcYg8WC74PtA6f-_BY66mA-HuV_5igrfThVbj8Jf_bH3TeanH8ouFBtdy8j6jsmp0a0SliHQj4sb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-20 xl:bg-gradient-to-r"></div>
+</div>
+<div class="w-full xl:w-1/2 p-xl flex flex-col gap-lg z-30 relative">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-data-mono text-data-mono text-primary-fixed tracking-widest uppercase border border-primary-fixed/30 px-2 py-1 bg-surface/50">Action / RPG</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mt-sm uppercase tracking-tight">Weapon Master</h3>
+</div>
+<a class="text-primary-container hover:text-primary transition-colors hover:drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]" href="#"><span class="material-symbols-outlined text-[48px]">play_circle</span></a>
+</div>
+<p class="font-body-lg text-on-surface-variant">
+                                Dự án trọng điểm tập trung vào hệ thống chiến đấu đa dạng vũ khí, được thiết kế để mang lại cảm giác hành động mãn nhãn ngay trên thiết bị di động.
+                            </p>
+<div class="bg-surface-container p-md border-l-2 border-primary-container/50">
+<h4 class="font-label-caps text-label-caps text-primary mb-md tracking-widest">Case Study Highlights:</h4>
+<ul class="list-none text-on-surface-variant font-body-md flex flex-col gap-sm">
+<li class="flex gap-sm"><span class="text-primary-container">▹</span> <span><strong class="text-on-surface">Core Loop:</strong> Explore -&gt; Combat -&gt; Upgrade.</span></li>
+<li class="flex gap-sm"><span class="text-primary-container">▹</span> <span><strong class="text-on-surface">Game Feel:</strong> Tích hợp Screen Shake &amp; Audio Feedback đa lớp để tăng độ "nặng" cho mỗi cú đánh.</span></li>
+<li class="flex gap-sm"><span class="text-primary-container">▹</span> <span><strong class="text-on-surface">Technical Design:</strong> Sử dụng Finite State Machine (FSM) linh hoạt để xây dựng AI kẻ thù có hành vi đa dạng.</span></li>
+<li class="flex gap-sm"><span class="text-primary-container">▹</span> <span><strong class="text-on-surface">Data-Driven:</strong> Cân bằng chỉ số hệ thống vũ khí và item thông qua JSON &amp; ScriptableObjects.</span></li>
+</ul>
+</div>
+<div class="flex flex-wrap gap-md mt-auto pt-md border-t border-outline-variant/50 items-center justify-between">
+<div class="flex flex-wrap gap-sm">
+<span class="font-data-mono text-data-mono bg-surface-container-high border border-outline-variant px-sm py-xs text-primary-fixed">Unity 2D</span>
+<span class="font-data-mono text-data-mono bg-surface-container-high border border-outline-variant px-sm py-xs text-primary-fixed">C#</span>
+<span class="font-data-mono text-data-mono bg-surface-container-high border border-outline-variant px-sm py-xs text-primary-fixed">JSON</span>
+</div>
+<button class="bg-primary-container text-background px-lg py-sm font-label-caps text-label-caps font-bold hover:bg-white hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.4)] uppercase tracking-widest">
+                    View Live Demo
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Market Analysis -->
+<section class="py-xl px-margin" id="analysis">
+<div class="flex flex-col gap-xl">
+<div class="flex items-center gap-lg">
+<h2 class="font-headline-md text-headline-md text-primary-container font-bold uppercase tracking-wide glow-text">&gt; Market Analysis</h2>
+<div class="h-[1px] bg-gradient-to-r from-primary-container/50 to-transparent flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+<div class="tech-border p-lg bg-surface-container/60 backdrop-blur-sm flex flex-col gap-md border-l-4 border-l-primary-container">
+<div class="flex items-center gap-md text-primary-container">
+<span class="material-symbols-outlined text-[32px]">trending_up</span>
+<h3 class="font-headline-md text-[24px] text-on-surface uppercase">Player Retention</h3>
+</div>
+<p class="font-body-md text-on-surface-variant">
+                            Nghiên cứu các chiến lược giữ chân người chơi hàng ngày (Daily Engagement) trong các trò chơi Casual thông qua Live-ops, phần thưởng định kỳ và meta-progression tinh giản.
                         </p>
-                        
-                        <div class="mt-sm">
-                            <h4 class="label-caps text-primary-fixed mb-sm">Case Study Details:</h4>
-                            <ul class="case-study-list text-on-surface-variant body-md">
-                                <li><strong>Core Loop:</strong> Chiến đấu -> Thu thập tài nguyên -> Nâng cấp vũ khí.</li>
-                                <li><strong>Combat Mechanics:</strong> Combo system dựa trên timing, animation canceling.</li>
-                                <li><strong>Technical Design:</strong> Xây dựng State Machine linh hoạt cho AI và Player, giúp dễ dàng thêm mới hành vi.</li>
-                                <li><strong>Game Feel:</strong> Tối ưu hóa particle effects và camera feedback để tăng lực đánh.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="flex gap-sm mt-auto pt-md border-t" style="flex-wrap: wrap;">
-                            <span class="mono-code tag">Unity 2D</span>
-                            <span class="mono-code tag">C#</span>
-                            <span class="mono-code tag">Cinemachine</span>
-                            <span class="mono-code tag">Odin Inspector</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Other Projects -->
-        <!--<section id="other-projects" class="section container">
-            <div class="flex flex-col gap-lg">
-                <div class="section-header">
-                    <h2 class="text-primary">Dự án khác</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="projects-grid"> 
-                   
-                    <div class="project-card tech-border gap-sm">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-primary" style="font-size: 24px;">Arcane Tactics</h3>
-                            <span class="material-symbols-outlined project-icon">stadia_controller</span>
-                        </div>
-                        <p class="body-md text-on-surface-variant">
-                            Một trò chơi chiến thuật theo lượt tập trung vào việc tối ưu hóa tài nguyên và hệ thống phản hồi phức tạp.
+<a class="font-label-caps text-label-caps text-primary hover:text-white hover:underline transition-all tracking-widest mt-auto inline-flex items-center gap-xs uppercase" href="#">Read full analysis <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+<div class="tech-border p-lg bg-surface-container/60 backdrop-blur-sm flex flex-col gap-md border-l-4 border-l-primary-container">
+<div class="flex items-center gap-md text-primary-container">
+<span class="material-symbols-outlined text-[32px]">extension</span>
+<h3 class="font-headline-md text-[24px] text-on-surface uppercase">Puzzle Mechanics</h3>
+</div>
+<p class="font-body-md text-on-surface-variant">
+                            Thiết kế những tương tác vật lý (physics-based interactions) đầy thỏa mãn cho game giải đố, tập trung vào sự rõ ràng về phản hồi và độ mượt mà của thao tác chạm.
                         </p>
-                        <div class="flex gap-xs mt-auto" style="flex-wrap: wrap;">
-                            <span class="mono-code tag-outline">Unity</span>
-                            <span class="mono-code tag-outline">C#</span>
-                            <span class="mono-code tag-outline">Shaders</span>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="project-card tech-border gap-sm">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-primary" style="font-size: 24px;">Neon Drift</h3>
-                            <span class="material-symbols-outlined project-icon">directions_car</span>
-                        </div>
-                        <p class="body-md text-on-surface-variant">
-                            Dự án mô phỏng vật lý xe đua với trọng tâm là cảm giác lái (game feel) và hệ thống hạt (VFX).
-                        </p>
-                        <div class="flex gap-xs mt-auto" style="flex-wrap: wrap;">
-                            <span class="mono-code tag-outline">Unity</span>
-                            <span class="mono-code tag-outline">HLSL</span>
-                        </div>
-                    </div>
-                    
-                   
-                    <div class="project-card tech-border gap-sm">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-primary" style="font-size: 24px;">Shadow Engine</h3>
-                            <span class="material-symbols-outlined project-icon">terminal</span>
-                        </div>
-                        <p class="body-md text-on-surface-variant">
-                            Engine mini xây dựng từ đầu để tìm hiểu về kiến trúc quản lý thực thể và hệ thống render cơ bản.
-                        </p>
-                        <div class="flex gap-xs mt-auto" style="flex-wrap: wrap;">
-                            <span class="mono-code tag-outline">C++</span>
-                            <span class="mono-code tag-outline">OpenGL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </section> -->
-
-        <!-- Market Analysis -->
-        <section id="analysis" class="section container">
-            <div class="flex flex-col gap-lg">
-                <div class="section-header">
-                    <h2 class="text-primary">Market Analysis</h2>
-                    <div class="section-line"></div>
-                </div>
-                
-                <div class="analysis-grid">
-                    <div class="analysis-card tech-border gap-sm">
-                        <div class="flex items-center gap-sm analysis-icon">
-                            <span class="material-symbols-outlined">trending_up</span>
-                            <h3 class="text-primary" style="font-size: 24px;">Player Retention Trends</h3>
-                        </div>
-                        <p class="body-md text-on-surface-variant">
-                            Nghiên cứu về các cơ chế giữ chân người chơi trong các tựa game Mid-core. Phân tích sự cân bằng giữa phần thưởng ngắn hạn (daily quests) và mục tiêu dài hạn (meta-progression).
-                        </p>
-                        <a href="#" class="text-primary-fixed text-sm mt-auto" style="text-decoration: underline;">Read full analysis -></a>
-                    </div>
-                    
-                    <div class="analysis-card tech-border gap-sm">
-                        <div class="flex items-center gap-sm analysis-icon">
-                            <span class="material-symbols-outlined">monetization_on</span>
-                            <h3 class="text-primary" style="font-size: 24px;">Monetization Models</h3>
-                        </div>
-                        <p class="body-md text-on-surface-variant">
-                            Đánh giá hiệu quả của hệ thống Battle Pass so với Gacha truyền thống. Cách thiết kế nền kinh tế trong game để đảm bảo tính công bằng (F2P friendly) nhưng vẫn mang lại doanh thu bền vững.
-                        </p>
-                        <a href="#" class="text-primary-fixed text-sm mt-auto" style="text-decoration: underline;">Read full analysis -></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education & Skills -->
-        <section id="education-skills" class="section container">
-            <div class="flex flex-col edu-skills-container gap-lg">
-                <!-- Education -->
-                <div class="flex flex-col gap-lg">
-                    <div class="section-header">
-                        <h2 class="text-primary">Education</h2>
-                        <div class="section-line"></div>
-                    </div>
-                    
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot active"></div>
-                            <h4 class="h3 text-primary" style="font-size: 20px;">Cử nhân Công nghệ Thông tin</h4>
-                            <p class="label-caps text-secondary-fixed mt-xs">Đại học Đại Nam - 2022 to Present</p>
-                            <p class="body-md text-on-surface-variant mt-xs">Chuyên ngành Công nghệ thông tin.</p>
-                        </div>
-                        
-                        <!-- <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <h4 class="h3 text-primary" style="font-size: 20px;">Game Design Certificate</h4>
-                            <p class="label-caps text-on-surface-variant mt-xs">Coursera / CalArts - 2022</p>
-                            <p class="body-md text-on-surface-variant mt-xs">Hoàn thành khóa học chuyên sâu về Core Mechanics và Level Design.</p>
-                        </div> -->
-                    </div>
-                </div>
-                
-                <!-- Skills -->
-                <div class="flex flex-col gap-lg">
-                    <div class="section-header">
-                        <h2 class="text-primary">Skills</h2>
-                        <div class="section-line"></div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-md">
-                        <div>
-                            <h4 class="label-caps text-primary-fixed mb-xs">Game Design</h4>
-                            <div class="flex gap-xs" style="flex-wrap: wrap;">
-                                <span class="skill-tag tech-border text-sm">System Design</span>
-                                <span class="skill-tag tech-border text-sm">Level Design</span>
-                                <span class="skill-tag tech-border text-sm">Economy Balance</span>
-                                <span class="skill-tag tech-border text-sm">UX/UI Design</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-sm">
-                            <h4 class="label-caps text-primary-fixed mb-xs">Tools & Tech</h4>
-                            <div class="flex gap-xs" style="flex-wrap: wrap;">
-                                <span class="tech-tag tech-border text-sm">Unity (C#)</span>
-                                <span class="tech-tag tech-border text-sm">Unreal Engine (Blueprints)</span>
-                                <span class="tech-tag tech-border text-sm">Git / Perforce</span>
-                                <span class="tech-tag tech-border text-sm">Figma</span>
-                                <span class="tech-tag tech-border text-sm">Miro / Notion</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="section container">
-            <div class="contact-card tech-border flex flex-col gap-lg text-center">
-                <div class="contact-bg tech-grid"></div>
-                <div class="contact-content flex flex-col gap-sm">
-                    <h2 class="text-primary">Let's build something great.</h2>
-                    <p class="body-lg text-on-surface-variant">
-                        Tôi luôn mở cửa cho các cơ hội thực tập và hợp tác dự án mới. Đừng ngần ngại liên hệ để thảo luận về game design, code, hoặc bất cứ điều gì thú vị.
+<a class="font-label-caps text-label-caps text-primary hover:text-white hover:underline transition-all tracking-widest mt-auto inline-flex items-center gap-xs uppercase" href="#">Read full analysis <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Skills -->
+<section class="py-xl px-margin" id="education-skills">
+<div class="flex flex-col md:flex-row gap-xl">
+<div class="w-full md:w-1/2 flex flex-col gap-xl">
+<div class="flex items-center gap-lg">
+<h2 class="font-headline-md text-headline-md text-primary-container font-bold uppercase tracking-wide glow-text">&gt; Education</h2>
+<div class="h-[1px] bg-gradient-to-r from-primary-container/50 to-transparent flex-grow"></div>
+</div>
+<div class="border-l-2 border-outline-variant pl-lg py-sm flex flex-col gap-xl relative ml-xs">
+<div class="relative">
+<div class="absolute -left-[29px] top-1 w-3 h-3 bg-primary-container shadow-[0_0_10px_rgba(0,240,255,0.8)]"></div>
+<h4 class="font-headline-md text-[20px] text-on-surface font-semibold uppercase">Sinh viên năm cuối</h4>
+<p class="font-data-mono text-data-mono text-primary mt-xs">Đại học Đại Nam - 2022 to Present</p>
+<p class="font-body-md text-outline mt-sm">Chuyên ngành Công nghệ thông tin</p>
+</div>
+<!-- 
+<div class="relative">
+<div class="absolute -left-[29px] top-1 w-3 h-3 bg-surface border border-outline-variant"></div>
+<h4 class="font-headline-md text-[20px] text-on-surface font-semibold uppercase">Game Design Certificate</h4>
+<p class="font-data-mono text-data-mono text-outline-variant mt-xs">Coursera / CalArts - 2022</p>
+<p class="font-body-md text-outline mt-sm">Hoàn thành khóa học chuyên sâu về Core Mechanics và Level Design cho thiết bị di động.</p>
+</div> 
+-->
+</div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-xl">
+<div class="flex items-center gap-lg">
+<h2 class="font-headline-md text-headline-md text-primary-container font-bold uppercase tracking-wide glow-text">&gt; Skills</h2>
+<div class="h-[1px] bg-gradient-to-r from-primary-container/50 to-transparent flex-grow"></div>
+</div>
+<div class="flex flex-col gap-lg bg-surface-container/40 p-lg border border-outline-variant/30">
+<div>
+<h4 class="font-label-caps text-label-caps text-primary-container mb-md tracking-widest border-b border-outline-variant/30 pb-xs inline-block">SYSTEM.DESIGN</h4>
+<div class="flex flex-wrap gap-md mt-sm">
+<span class="font-data-mono text-data-mono px-sm py-xs bg-surface border border-primary-container/30 text-on-surface">Level Design</span>
+<span class="font-data-mono text-data-mono px-sm py-xs bg-surface border border-primary-container/30 text-on-surface">Economy Balancing</span>
+<span class="font-data-mono text-data-mono px-sm py-xs bg-surface border border-primary-container/30 text-on-surface">UX/UI Flow</span>
+<span class="font-data-mono text-data-mono px-sm py-xs bg-surface border border-primary-container/30 text-on-surface">Monetization Models</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary-container mb-md tracking-widest border-b border-outline-variant/30 pb-xs inline-block">TECH.STACK</h4>
+<div class="flex flex-wrap gap-md mt-sm">
+<span class="font-data-mono text-data-mono px-sm py-xs bg-primary-container/10 border border-primary-container/50 text-primary-fixed">Unity (C#)</span>
+<span class="font-data-mono text-data-mono px-sm py-xs bg-primary-container/10 border border-primary-container/50 text-primary-fixed">Python</span>
+<span class="font-data-mono text-data-mono px-sm py-xs bg-surface-container-high border border-outline-variant text-outline">Git</span>
+<span class="font-data-mono text-data-mono px-sm py-xs bg-surface-container-high border border-outline-variant text-outline">Object Pooling</span>
+<span class="font-data-mono text-data-mono px-sm py-xs bg-surface-container-high border border-outline-variant text-outline">Firebase Analytics</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section class="py-xl px-margin mb-xl" id="contact">
+<div class="tech-border bg-[linear-gradient(45deg,var(--tw-colors-surface-container),var(--tw-colors-background))] p-xl flex flex-col md:flex-row gap-xl items-center justify-between text-center md:text-left relative overflow-hidden">
+<div class="absolute right-0 top-0 w-64 h-64 bg-primary-container/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="z-10 flex flex-col gap-md max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold uppercase tracking-tight">Ready to Collaborate<span class="text-primary-container animate-pulse">_</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Tôi luôn sẵn sàng cho các cơ hội thực tập và hợp tác dự án Mobile Casual/Puzzle. Hãy cùng nhau tạo nên những trải nghiệm người chơi tuyệt vời.
                     </p>
-                </div>
-                
-                <div class="contact-actions">
-                    <a href="mailto:dphung23456@gmail.com" class="btn-solid label-caps" style="text-align: center;">Email Me</a>
-                    <a href="https://www.linkedin.com/in/trung-%C4%91%E1%BB%A9c-2467183b2/" class="btn-outline label-caps tech-border" style="text-align: center;">LinkedIn</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container flex flex-col gap-md">
-            <div class="h3 text-primary">PHUNG NGUYEN TRUNG DUC</div>
-            <div class="body-md text-on-surface-variant text-center" style="opacity: 0.8;">
-                © 2026 PHUNG NGUYEN TRUNG DUC // GAME DESIGNER
-            </div>
-            <div class="footer-links flex gap-md label-caps">
-                <a href="https://www.linkedin.com/in/trung-%C4%91%E1%BB%A9c-2467183b2/" class="text-on-surface-variant">LinkedIn</a>
-                <a href="mailto:dphung23456@gmail.com" class="text-on-surface-variant">Email</a>
-                <a href="https://github.com/trungduc4804" class="text-on-surface-variant">GitHub</a>
-            </div>
+</div>
+<div class="z-10 flex flex-col sm:flex-row gap-md w-full md:w-auto">
+<a class="bg-primary-container text-background px-xl py-md font-label-caps text-label-caps text-center hover:bg-white hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-all uppercase tracking-widest font-bold" href="mailto:dphung23456@gmail.com">
+                    Execute Email
+                </a>
+<a class="tech-border bg-surface-container/50 text-primary-container px-xl py-md font-label-caps text-label-caps text-center hover:bg-primary-container hover:text-background transition-all uppercase tracking-widest" href="https://www.linkedin.com/in/trung-%C4%91%E1%BB%A9c-2467183b2/">
+                    Access LinkedIn
+                </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-primary-container/20 py-lg px-margin relative">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary-container/50 to-transparent"></div>
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-lg">
+<div class="font-headline-md text-[20px] text-on-surface font-bold tracking-widest uppercase">PN.TRUNGDUC</div>
+<div class="font-data-mono text-data-mono text-outline text-center md:text-left text-[12px] tracking-widest uppercase">
+            System_Status: Online // © 2026 PHUNG NGUYEN TRUNG DUC
         </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<div class="flex gap-lg font-data-mono text-data-mono text-[12px] tracking-widest uppercase">
+<a class="text-outline hover:text-primary-container transition-colors" href="https://www.linkedin.com/in/trung-%C4%91%E1%BB%A9c-2467183b2/">LinkedIn</a>
+<a class="text-outline hover:text-primary-container transition-colors" href="https://github.com/trungduc4804">GitHub</a>
+<a class="text-outline hover:text-primary-container transition-colors" href="#">Emai</a>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body></html>
