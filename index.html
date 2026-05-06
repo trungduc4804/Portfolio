@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHÙNG NGUYỄN TRUNG ĐỨC - Game Design Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- TopNavBar -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <div class="h3 text-primary-fixed" style="letter-spacing: -0.05em;">PHUNG NGUYEN TRUNG DUC</div>
+            <div class="nav-links gap-md label-caps">
+                <a href="#projects" class="active">Projects</a>
+                <a href="#analysis">Analysis</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="flex items-center gap-sm">
+                <button class="btn-primary label-caps">
+                    Download CV
+                </button>
+                <span class="material-symbols-outlined text-primary" style="cursor: pointer; font-size: 28px;">terminal</span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section tech-grid section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content flex flex-col gap-md">
+                <span class="mono-code status-badge">[ STATUS: SEEKING OPPORTUNITIES ]</span>
+                <h1 class="text-primary">PHÙNG NGUYỄN TRUNG ĐỨC</h1>
+                <p class="h3 text-on-surface-variant">Game Design Intern | Bridging Programming & Player Experience</p>
+                <p class="body-lg text-on-surface-variant" style="max-width: 42rem; margin-top: var(--spacing-sm);">
+                    Designing systemic loops and juicy mechanics. Specializing in technical design where code meets feel.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="section container">
+            <div class="flex flex-col gap-lg">
+                <div class="section-header">
+                    <h2 class="text-primary">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-card tech-border flex flex-col gap-lg items-center justify-between">
+                    <div class="flex justify-center" style="width: 100%; max-width: 16rem;">
+                        <div class="about-image glow-effect">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOuNR_aC2p_4BwhGpUQlddlFWJt3BAvXA5w72_dLo4PXXwe0cELsvVo-E14YbeVL6Lm5l819ngMBadNKGC1a9IA4LHE_aBRU4TZcAsFyPfTPKWqRXL970FEgxD563vAoFZIurOSWvMUIKeGRT9lNt702wuLm4thc5FBZmEevNyVq2LL-QxahjhPiVc0tE5eW-_8IIQZgS7ETfXsiKcRYOFQ4LYAZXVAALqP0DHPKjSGpWvWUwFeu1rHj2Sr6SMsvfZKxKAXe1Vh9S4" alt="Profile">
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col gap-sm" style="flex: 1;">
+                        <h3 class="text-primary">Technical Game Designer</h3>
+                        <p class="body-lg text-on-surface-variant">
+                            Tôi là một Game Designer với nền tảng lập trình vững chắc. Sự kết hợp giữa tư duy logic của một developer và sự sáng tạo của một designer giúp tôi xây dựng những hệ thống gameplay có chiều sâu và dễ dàng triển khai thực tế.
+                        </p>
+                        <p class="body-md text-on-surface-variant">
+                            Mục tiêu của tôi là tạo ra những trải nghiệm mượt mà, nơi người chơi có thể cảm nhận được "game feel" trong từng tương tác nhỏ nhất, đồng thời đảm bảo mã nguồn và hệ thống đủ linh hoạt để mở rộng.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Project: Weapon Master -->
+        <section id="projects" class="section container">
+            <div class="flex flex-col gap-lg">
+                <div class="section-header">
+                    <h2 class="text-primary">Featured Project</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="featured-project tech-border flex flex-col">
+                    <div class="featured-image-container">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeS_w3BgdwTvxo6Y22dFnhHCHiWdRyQQWKNYAGbcSvGRmB-J-RrycB98S6HahRK6NS8VZZzVrD8iMbJGC0i1ITk2DG_5MU1o5HNvgXZgFh7wrKdC3VzXd_2w70jABacT4uhrZbivZWh7xDCbN_AlGf7jGNzZwuobi9j9qps_woCZUUdAEGR4j7UKdB0Er82h-5bcYg8WC74PtA6f-_BY66mA-HuV_5igrfThVbj8Jf_bH3TeanH8ouFBtdy8j6jsmp0a0SliHQj4sb" alt="Weapon Master Gameplay">
+                        <div class="featured-image-overlay"></div>
+                    </div>
+                    
+                    <div class="featured-content flex flex-col gap-md">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="mono-code text-secondary-fixed" style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Action / RPG</span>
+                                <h3 class="text-primary mt-xs">Weapon Master</h3>
+                            </div>
+                            <a href="#" class="text-primary"><span class="material-symbols-outlined play-icon">play_circle</span></a>
+                        </div>
+                        
+                        <p class="body-lg text-on-surface-variant">
+                            Dự án trọng điểm tập trung vào hệ thống chiến đấu đa dạng vũ khí. Mỗi loại vũ khí mang lại một cảm giác (game feel) hoàn toàn khác biệt thông qua việc tinh chỉnh frame data, hitstop, và screen shake.
+                        </p>
+                        
+                        <div class="mt-sm">
+                            <h4 class="label-caps text-primary-fixed mb-sm">Case Study Details:</h4>
+                            <ul class="case-study-list text-on-surface-variant body-md">
+                                <li><strong>Core Loop:</strong> Chiến đấu -> Thu thập tài nguyên -> Nâng cấp vũ khí.</li>
+                                <li><strong>Combat Mechanics:</strong> Combo system dựa trên timing, animation canceling.</li>
+                                <li><strong>Technical Design:</strong> Xây dựng State Machine linh hoạt cho AI và Player, giúp dễ dàng thêm mới hành vi.</li>
+                                <li><strong>Game Feel:</strong> Tối ưu hóa particle effects và camera feedback để tăng lực đánh.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex gap-sm mt-auto pt-md border-t" style="flex-wrap: wrap;">
+                            <span class="mono-code tag">Unity 2D</span>
+                            <span class="mono-code tag">C#</span>
+                            <span class="mono-code tag">Cinemachine</span>
+                            <span class="mono-code tag">Odin Inspector</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Projects -->
+        <!--<section id="other-projects" class="section container">
+            <div class="flex flex-col gap-lg">
+                <div class="section-header">
+                    <h2 class="text-primary">Dự án khác</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="projects-grid"> 
+                   
+                    <div class="project-card tech-border gap-sm">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-primary" style="font-size: 24px;">Arcane Tactics</h3>
+                            <span class="material-symbols-outlined project-icon">stadia_controller</span>
+                        </div>
+                        <p class="body-md text-on-surface-variant">
+                            Một trò chơi chiến thuật theo lượt tập trung vào việc tối ưu hóa tài nguyên và hệ thống phản hồi phức tạp.
+                        </p>
+                        <div class="flex gap-xs mt-auto" style="flex-wrap: wrap;">
+                            <span class="mono-code tag-outline">Unity</span>
+                            <span class="mono-code tag-outline">C#</span>
+                            <span class="mono-code tag-outline">Shaders</span>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="project-card tech-border gap-sm">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-primary" style="font-size: 24px;">Neon Drift</h3>
+                            <span class="material-symbols-outlined project-icon">directions_car</span>
+                        </div>
+                        <p class="body-md text-on-surface-variant">
+                            Dự án mô phỏng vật lý xe đua với trọng tâm là cảm giác lái (game feel) và hệ thống hạt (VFX).
+                        </p>
+                        <div class="flex gap-xs mt-auto" style="flex-wrap: wrap;">
+                            <span class="mono-code tag-outline">Unity</span>
+                            <span class="mono-code tag-outline">HLSL</span>
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="project-card tech-border gap-sm">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-primary" style="font-size: 24px;">Shadow Engine</h3>
+                            <span class="material-symbols-outlined project-icon">terminal</span>
+                        </div>
+                        <p class="body-md text-on-surface-variant">
+                            Engine mini xây dựng từ đầu để tìm hiểu về kiến trúc quản lý thực thể và hệ thống render cơ bản.
+                        </p>
+                        <div class="flex gap-xs mt-auto" style="flex-wrap: wrap;">
+                            <span class="mono-code tag-outline">C++</span>
+                            <span class="mono-code tag-outline">OpenGL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section> -->
+
+        <!-- Market Analysis -->
+        <section id="analysis" class="section container">
+            <div class="flex flex-col gap-lg">
+                <div class="section-header">
+                    <h2 class="text-primary">Market Analysis</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="analysis-grid">
+                    <div class="analysis-card tech-border gap-sm">
+                        <div class="flex items-center gap-sm analysis-icon">
+                            <span class="material-symbols-outlined">trending_up</span>
+                            <h3 class="text-primary" style="font-size: 24px;">Player Retention Trends</h3>
+                        </div>
+                        <p class="body-md text-on-surface-variant">
+                            Nghiên cứu về các cơ chế giữ chân người chơi trong các tựa game Mid-core. Phân tích sự cân bằng giữa phần thưởng ngắn hạn (daily quests) và mục tiêu dài hạn (meta-progression).
+                        </p>
+                        <a href="#" class="text-primary-fixed text-sm mt-auto" style="text-decoration: underline;">Read full analysis -></a>
+                    </div>
+                    
+                    <div class="analysis-card tech-border gap-sm">
+                        <div class="flex items-center gap-sm analysis-icon">
+                            <span class="material-symbols-outlined">monetization_on</span>
+                            <h3 class="text-primary" style="font-size: 24px;">Monetization Models</h3>
+                        </div>
+                        <p class="body-md text-on-surface-variant">
+                            Đánh giá hiệu quả của hệ thống Battle Pass so với Gacha truyền thống. Cách thiết kế nền kinh tế trong game để đảm bảo tính công bằng (F2P friendly) nhưng vẫn mang lại doanh thu bền vững.
+                        </p>
+                        <a href="#" class="text-primary-fixed text-sm mt-auto" style="text-decoration: underline;">Read full analysis -></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Skills -->
+        <section id="education-skills" class="section container">
+            <div class="flex flex-col edu-skills-container gap-lg">
+                <!-- Education -->
+                <div class="flex flex-col gap-lg">
+                    <div class="section-header">
+                        <h2 class="text-primary">Education</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot active"></div>
+                            <h4 class="h3 text-primary" style="font-size: 20px;">Cử nhân Công nghệ Thông tin</h4>
+                            <p class="label-caps text-secondary-fixed mt-xs">Đại học Đại Nam - 2022 to Present</p>
+                            <p class="body-md text-on-surface-variant mt-xs">Chuyên ngành Công nghệ thông tin.</p>
+                        </div>
+                        
+                        <!-- <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h4 class="h3 text-primary" style="font-size: 20px;">Game Design Certificate</h4>
+                            <p class="label-caps text-on-surface-variant mt-xs">Coursera / CalArts - 2022</p>
+                            <p class="body-md text-on-surface-variant mt-xs">Hoàn thành khóa học chuyên sâu về Core Mechanics và Level Design.</p>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <!-- Skills -->
+                <div class="flex flex-col gap-lg">
+                    <div class="section-header">
+                        <h2 class="text-primary">Skills</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    
+                    <div class="flex flex-col gap-md">
+                        <div>
+                            <h4 class="label-caps text-primary-fixed mb-xs">Game Design</h4>
+                            <div class="flex gap-xs" style="flex-wrap: wrap;">
+                                <span class="skill-tag tech-border text-sm">System Design</span>
+                                <span class="skill-tag tech-border text-sm">Level Design</span>
+                                <span class="skill-tag tech-border text-sm">Economy Balance</span>
+                                <span class="skill-tag tech-border text-sm">UX/UI Design</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-sm">
+                            <h4 class="label-caps text-primary-fixed mb-xs">Tools & Tech</h4>
+                            <div class="flex gap-xs" style="flex-wrap: wrap;">
+                                <span class="tech-tag tech-border text-sm">Unity (C#)</span>
+                                <span class="tech-tag tech-border text-sm">Unreal Engine (Blueprints)</span>
+                                <span class="tech-tag tech-border text-sm">Git / Perforce</span>
+                                <span class="tech-tag tech-border text-sm">Figma</span>
+                                <span class="tech-tag tech-border text-sm">Miro / Notion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section container">
+            <div class="contact-card tech-border flex flex-col gap-lg text-center">
+                <div class="contact-bg tech-grid"></div>
+                <div class="contact-content flex flex-col gap-sm">
+                    <h2 class="text-primary">Let's build something great.</h2>
+                    <p class="body-lg text-on-surface-variant">
+                        Tôi luôn mở cửa cho các cơ hội thực tập và hợp tác dự án mới. Đừng ngần ngại liên hệ để thảo luận về game design, code, hoặc bất cứ điều gì thú vị.
+                    </p>
+                </div>
+                
+                <div class="contact-actions">
+                    <a href="mailto:dphung23456@gmail.com" class="btn-solid label-caps" style="text-align: center;">Email Me</a>
+                    <a href="https://www.linkedin.com/in/trung-%C4%91%E1%BB%A9c-2467183b2/" class="btn-outline label-caps tech-border" style="text-align: center;">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container flex flex-col gap-md">
+            <div class="h3 text-primary">PHUNG NGUYEN TRUNG DUC</div>
+            <div class="body-md text-on-surface-variant text-center" style="opacity: 0.8;">
+                © 2026 PHUNG NGUYEN TRUNG DUC // GAME DESIGNER
+            </div>
+            <div class="footer-links flex gap-md label-caps">
+                <a href="https://www.linkedin.com/in/trung-%C4%91%E1%BB%A9c-2467183b2/" class="text-on-surface-variant">LinkedIn</a>
+                <a href="mailto:dphung23456@gmail.com" class="text-on-surface-variant">Email</a>
+                <a href="https://github.com/trungduc4804" class="text-on-surface-variant">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
